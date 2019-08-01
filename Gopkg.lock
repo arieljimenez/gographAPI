@@ -2,33 +2,12 @@
 
 
 [[projects]]
-  digest = "1:76dc72490af7174349349838f2fe118996381b31ea83243812a97e5a0fd5ed55"
-  name = "github.com/dgrijalva/jwt-go"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "06ea1031745cb8b3dab3f6a236daf2b0aa468b7e"
-  version = "v3.2.0"
-
-[[projects]]
-  digest = "1:865079840386857c809b72ce300be7580cb50d3d3129ce11bf9aa6ca2bc1934a"
-  name = "github.com/fatih/color"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "5b77d2a35fb0ede96d138fc9a99f5c9b6aef11b4"
-  version = "v1.7.0"
-
-[[projects]]
-  digest = "1:abeb38ade3f32a92943e5be54f55ed6d6e3b6602761d74b4aab4c9dd45c18abd"
-  name = "github.com/fsnotify/fsnotify"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9"
-  version = "v1.4.7"
-
-[[projects]]
-  digest = "1:1c70b4d7285f792bd387c1adac08825715147fa210b3d2826ffd2bf56be9455b"
+  digest = "1:58c033da727ebd5a6769209e479cac9a6e4dab53c879631af3d8161423099d57"
   name = "github.com/go-chi/chi"
-  packages = ["."]
+  packages = [
+    ".",
+    "middleware",
+  ]
   pruneopts = "UT"
   revision = "da24bba8dcd4021cafac38724bf10dccc97c3e36"
   version = "v4.0.2"
@@ -40,14 +19,6 @@
   pruneopts = "UT"
   revision = "3215478343fbc559bd3fc08f7031bb134d6bdad5"
   version = "v1.0.1"
-
-[[projects]]
-  digest = "1:65ab4f1f8c0e5398fe0fff5fa6faa12640a7bb544bde08c5494a0e9899712635"
-  name = "github.com/go-siris/siris"
-  packages = ["core/errors"]
-  pruneopts = "UT"
-  revision = "d6bc3df4b216199bec985043ca6c3e5c00232fd5"
-  version = "v7.4.0"
 
 [[projects]]
   digest = "1:7fbb40f65374cb64a7bf3f1f74e2cb4c4437d93bc3d8921cf7e3d7ad2ab20989"
@@ -70,38 +41,6 @@
   version = "v0.7.8"
 
 [[projects]]
-  digest = "1:31e761d97c76151dde79e9d28964a812c46efc5baee4085b86f68f0c654450de"
-  name = "github.com/konsorten/go-windows-terminal-sequences"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "f55edac94c9bbba5d6182a4be46d86a2c9b5b50e"
-  version = "v1.0.2"
-
-[[projects]]
-  digest = "1:efd601ad1d1189884f37ed075fadb5bbd17f1f5acf5862827247c6da56d125ba"
-  name = "github.com/labstack/echo"
-  packages = [
-    ".",
-    "middleware",
-  ]
-  pruneopts = "UT"
-  revision = "38772c686c76b501f94bd6cd5b77f5842e93b559"
-  version = "v3.3.10"
-
-[[projects]]
-  digest = "1:6e15357cae900fa1a8015c7fc9efdb406f72b644549a3422f3f1b7f465836a84"
-  name = "github.com/labstack/gommon"
-  packages = [
-    "bytes",
-    "color",
-    "log",
-    "random",
-  ]
-  pruneopts = "UT"
-  revision = "ab0bfd9a5eba33a8c364bf3390d809ed23c31f97"
-  version = "v0.2.9"
-
-[[projects]]
   digest = "1:12cb143f2148bf54bcd9fe622abac17325e85eeb1d84b8ec6caf1c80232108fd"
   name = "github.com/lib/pq"
   packages = [
@@ -113,153 +52,15 @@
   revision = "3427c32cb71afc948325f299f040e53c1dd78979"
   version = "v1.2.0"
 
-[[projects]]
-  digest = "1:c658e84ad3916da105a761660dcaeb01e63416c8ec7bc62256a9b411a05fcd67"
-  name = "github.com/mattn/go-colorable"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "167de6bfdfba052fa6b2d3664c8f5272e23c9072"
-  version = "v0.0.9"
-
-[[projects]]
-  digest = "1:9b90c7639a41697f3d4ad12d7d67dfacc9a7a4a6e0bbfae4fc72d0da57c28871"
-  name = "github.com/mattn/go-isatty"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "1311e847b0cb909da63b5fecfb5370aa66236465"
-  version = "v0.0.8"
-
-[[projects]]
-  digest = "1:58b4c5586232c9f9fc5ebc4870e9a24e41be9825b0b500bbeac2ebfcb24aab9e"
-  name = "github.com/oxequa/interact"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "f8fb5795b5d713c41dab6771ffe1fdfdfd0c3285"
-  version = "1.1.1"
-
-[[projects]]
-  digest = "1:e6d5f146320eb7b54c4ab61bb0d775cf1140834d3bdb269928b7dfff89bc80c2"
-  name = "github.com/oxequa/realize"
-  packages = [
-    ".",
-    "realize",
-  ]
-  pruneopts = "UT"
-  revision = "13ee93c5f75c240128feb4271e025f2f381ca0f5"
-  version = "v2.0.2"
-
-[[projects]]
-  branch = "master"
-  digest = "1:a3b8912deeef29007fab9a13a9f21b9e9b59c621a2ed61e2fe7b37320a71fbd5"
-  name = "github.com/satori/go.uuid"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "b2ce2384e17bbe0c6d34077efa39dbab3e09123b"
-
-[[projects]]
-  digest = "1:04457f9f6f3ffc5fea48e71d62f2ca256637dee0a04d710288e27e05c8b41976"
-  name = "github.com/sirupsen/logrus"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "839c75faf7f98a33d445d181f3018b5c3409a45e"
-  version = "v1.4.2"
-
-[[projects]]
-  digest = "1:c468422f334a6b46a19448ad59aaffdfc0a36b08fdcc1c749a0b29b6453d7e59"
-  name = "github.com/valyala/bytebufferpool"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7"
-  version = "v1.0.0"
-
-[[projects]]
-  digest = "1:4d29fdc69817829d8c78473d61613d984ce59675110cee7a2f0314f332cc70a2"
-  name = "github.com/valyala/fasttemplate"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "8b5e4e491ab636663841c42ea3c5a9adebabaf36"
-  version = "v1.0.1"
-
-[[projects]]
-  branch = "master"
-  digest = "1:cb823a5f7777276059b25eaadda6a12892f3beb6d0deee01df0d8f8692ffcc82"
-  name = "golang.org/x/crypto"
-  packages = [
-    "acme",
-    "acme/autocert",
-  ]
-  pruneopts = "UT"
-  revision = "4def268fd1a49955bfb3dda92fe3db4f924f2285"
-
-[[projects]]
-  branch = "master"
-  digest = "1:ef151399f80f91873b74e1741370d6146a1976e5060fe3b41068e4e664388fd6"
-  name = "golang.org/x/net"
-  packages = [
-    "idna",
-    "websocket",
-  ]
-  pruneopts = "UT"
-  revision = "ca1201d0de80cfde86cb01aea620983605dfe99b"
-
-[[projects]]
-  branch = "master"
-  digest = "1:4a2a181f5861b29bf885cc45ade5e9273cceb85fe6e6e3162310a6b6b5771dbc"
-  name = "golang.org/x/sys"
-  packages = ["unix"]
-  pruneopts = "UT"
-  revision = "1393eb0183657fb29200106b17a5042ec6e48dbe"
-
-[[projects]]
-  digest = "1:8d8faad6b12a3a4c819a3f9618cb6ee1fa1cfc33253abeeea8b55336721e3405"
-  name = "golang.org/x/text"
-  packages = [
-    "collate",
-    "collate/build",
-    "internal/colltab",
-    "internal/gen",
-    "internal/language",
-    "internal/language/compact",
-    "internal/tag",
-    "internal/triegen",
-    "internal/ucd",
-    "language",
-    "secure/bidirule",
-    "transform",
-    "unicode/bidi",
-    "unicode/cldr",
-    "unicode/norm",
-    "unicode/rangetable",
-  ]
-  pruneopts = "UT"
-  revision = "342b2e1fbaa52c93f31447ad2c6abc048c63e475"
-  version = "v0.3.2"
-
-[[projects]]
-  branch = "v2"
-  digest = "1:927bc5076aef9916f1920f2a07e3723e9da1dcd52baa84d29893a3f417c867b4"
-  name = "gopkg.in/urfave/cli.v2"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "d3ae77c26ac8db90639677e4831a728d33c36111"
-
-[[projects]]
-  branch = "v2"
-  digest = "1:2d56cd111a870bdf3ee37601877effe1fc79b8983645c147846f4769b6eb7051"
-  name = "gopkg.in/yaml.v2"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "7b8349ac747c6a24702b762d2c4fd9266cf4f1d6"
-
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
     "github.com/go-chi/chi",
+    "github.com/go-chi/chi/middleware",
     "github.com/go-chi/render",
     "github.com/graphql-go/graphql",
     "github.com/lib/pq",
-    "github.com/oxequa/realize",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

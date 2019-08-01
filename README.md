@@ -4,8 +4,9 @@ This is a fun project that will be used on the ValhallaCoders Blog.
 
 ## Dev Dependencies
 
-- Golang [Dep](https://golang.github.io/dep/docs/installation.html): packages/dependencies manager. To add more dependencies: `$ dep ensure -add github.com/foo/bar github.com/bar/foo`
 - Postgres DB Administrtor [pgAdmin](https://www.pgadmin.org/download/)
+- [Dep](https://golang.github.io/dep/docs/installation.html): Golang packages/dependencies manager. To add more dependencies: `$ dep ensure -add github.com/foo/bar github.com/bar/foo`. If you need to add a new golang dependency, just import it and run `$ dep ensure`. **Warning**: if you run this command will install all dependencies that are required and delete the ones thar are installed but not in use.
+- [Realize](https://github.com/oxequa/realize): Golang configurable live reload and task runner. `$ go get https://github.com/oxequa/realize` to grab the binary. PS: since this is a program, it cannot be on dep dependencies file.
 
 ## Dev
 
@@ -17,8 +18,15 @@ This is a fun project that will be used on the ValhallaCoders Blog.
 
 ### API
 
-- After a `dep ensure`, just run `$ go run main.go`... for now
-- If you need to add a new golang dependency, just import it and run `$ dep ensure`. Warning: if you run this command will install all dependencies that are required and delete the ones thar are installed but not in use.
+- After a `dep ensure`, just run `$ realize start`, this will execute the `main.go` and watch for changes to hotreload them.
+
+## TODO
+
+- ~~add a dependency manager~~
+- ~~add a task runner/hotreload to watch golang code~~
+- make the API reads env vars
+- release the v0.0
+- release the v0.1 (containerized)
 
 ## Moving to Prod
 

@@ -13,8 +13,7 @@ if [ -z $cont_exist ]; then
   docker run -d --name ${CONTAINER_NAME} \
     --env-file "$PWD/.env" \
     -p "5432:5432" \
-    -v ${PWD}/postgres:/var/lib/postgresql/data \
-    # --network isolated \
+    -v ${PWD}/db:/var/lib/postgresql/data \
     postgres:${IMAGE_TAG}
 else
   echo "Running ${CONTAINER_NAME} ${IMAGE_TAG}"
