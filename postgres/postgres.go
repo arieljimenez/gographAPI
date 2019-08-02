@@ -3,6 +3,7 @@ package postgres
 import (
 	"database/sql"
 	"fmt"
+	"os"
 
 	_ "github.com/lib/pq" // postgres driver
 )
@@ -14,8 +15,8 @@ type Db struct {
 
 // New makes a new database using the connection string and
 // returns it, otherwise returns the error
-func New(connString string) (*Db, error) {
-	db, err := sql.Open("postgres", connString)
+func New() (*Db, error) {
+	db, err := sql.Open("postgres", connString())
 	if err != nil {
 		return nil, err
 	}
@@ -29,11 +30,15 @@ func New(connString string) (*Db, error) {
 	return &Db{db}, nil
 }
 
-// ConnString returns a connection string based on the parameters it's given
-// This would normally also contain the password, however we're not using one
-func ConnString(host string, port int, user string, pass string, dbName string) string {
+func connString() string {
+	host, _ := os.LookupEnv("POSTGRES_HOST")
+	user, _ := os.LookupEnv("POSTGRES_USER")
+	pass, _ := os.LookupEnv("POSTGRES_PASSWORD")
+	dbName, _ := os.LookupEnv("POSTGRES_DBNAME")
+	port, _ := os.LookupEnv("POSTGRES_PORT")
+
 	return fmt.Sprintf(
-		"host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
+		"host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
 		host, port, user, pass, dbName,
 	)
 }

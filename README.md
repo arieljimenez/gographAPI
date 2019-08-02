@@ -24,7 +24,7 @@ This is a fun project that will be used on the ValhallaCoders Blog.
 
 - ~~add a dependency manager~~
 - ~~add a task runner/hotreload to watch golang code~~
-- make the API reads env vars
+- ~~make the API reads env vars~~
 - release the v0.0
 - release the v0.1 (containerized)
 

@@ -12,7 +12,15 @@ import (
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/render"
 	"github.com/graphql-go/graphql"
+	"github.com/joho/godotenv"
 )
+
+// init run before the main
+func init() {
+	if err := godotenv.Load(); err != nil {
+		log.Fatal("No .env file found")
+	}
+}
 
 func main() {
 	router, db := initializeAPI()
@@ -27,9 +35,7 @@ func initializeAPI() (*chi.Mux, *postgres.Db) {
 	router := chi.NewRouter()
 
 	// Create a new connection to our pg database
-	db, err := postgres.New(
-		postgres.ConnString("localhost", 5432, "postgres", "thisisnotagoodpassword", "postgres"), // host, port, user, password db
-	)
+	db, err := postgres.New()
 
 	if err != nil {
 		log.Fatal(err)
