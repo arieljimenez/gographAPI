@@ -25,12 +25,15 @@ This is a fun project that will be used on the ValhallaCoders Blog.
 - ~~add a dependency manager~~
 - ~~add a task runner/hotreload to watch golang code~~
 - ~~make the API reads env vars~~
+- add some response to /
+- clean the code
 - release the v0.0
 - release the v0.1 (containerized)
+- implement http2
 
 ## Moving to Prod
 
-- [] automatize this process.
+- automatize this process.
 
 ```go
 fmt.Println("See you in Valhalla!")

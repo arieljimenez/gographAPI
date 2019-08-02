@@ -44,3 +44,10 @@ func (s *Server) GraphQL() http.HandlerFunc {
 		render.JSON(w, r, result)
 	}
 }
+
+// Home root handler
+func (s *Server) Home() http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		render.JSON(w, r, "See you in Valhalla")
+	}
+}

@@ -34,7 +34,6 @@ func main() {
 func initializeAPI() (*chi.Mux, *postgres.Db) {
 	router := chi.NewRouter()
 
-	// Create a new connection to our pg database
 	db, err := postgres.New()
 
 	if err != nil {
@@ -67,7 +66,7 @@ func initializeAPI() (*chi.Mux, *postgres.Db) {
 		middleware.Recoverer,                          // recover from panics without crashing server
 	)
 
-	// Create the graphql route with a Server method to handle it
+	router.Get("/", s.Home())
 	router.Post("/graphql", s.GraphQL())
 
 	return router, db
